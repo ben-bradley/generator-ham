@@ -1,7 +1,3 @@
-var _ = require('lodash');
-
-var properties = ['method', 'path', 'info', 'headers', 'payload', 'query'];
-
 module.exports = function(server, options) {
 
   // select the API server
@@ -15,15 +11,13 @@ module.exports = function(server, options) {
 
       // this is the fn that finally deals with the request
       handler: function (request, reply) {
-        var response = {
-          ts: new Date(),
-          params: (request.params.p) ? request.params.p.split('/') : []
-        };
-
         // this is how you can log things
-        server.log('<%= props.name %>', 'message here')
+        server.log('<%= props.name %>', 'message here');
 
-        reply(_.assign(response, _.pick(request, properties)));
+        reply({
+          ts: new Date()
+        });
+
       },
 
       // This appears in the "/docs" route

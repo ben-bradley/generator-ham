@@ -1,5 +1,6 @@
 var Hapi = require('hapi'), // for reasons
   config = require('config'), // for app config
+  Assets = require('./assets'), // for bower assets
   glob = require('glob'), // for dynamically reading plugins
   args = require('argify'), // for command-line args
   path = require('path'), //
@@ -81,6 +82,15 @@ glob.sync(__dirname + '/plugins/*/index.js').forEach(function (file) {
     });
   else
     console.log('Plugin NOT loaded: ' + name);
+});
+
+server.register({
+  register: Assets
+}, function(err) {
+  if (err)
+    throw new Error(err);
+  if (!config.test)
+    console.log('Plugin loaded: Assets');
 });
 
 // register Lout for the /docs routes

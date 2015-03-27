@@ -5,7 +5,7 @@ module.exports.register = function (server, options, next) {
 
   ui.route({
     method: 'get',
-    path: '/{p*}',
+    path: '/assets/{p*}',
     config: {
       description: 'The root route for handling request for 3rd party libs',
       handler: {
