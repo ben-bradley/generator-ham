@@ -58,9 +58,5 @@ module.exports = yeoman.generators.Base.extend({
       this.template('routes/_api.js', dir + 'routes/api.js');
       this.template('routes/_ui.js', dir + 'routes/ui.js');
     }
-  },
-
-  install: function () {
-    this.npmInstall(this.props.name);
   }
 });
