@@ -1,0 +1,6 @@
+{
+  "api_port": 3001,
+  "ui_port": 3000,
+  "development": true,
+  "production": false
+}

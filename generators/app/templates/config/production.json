@@ -1,0 +1,6 @@
+{
+  "api_port": 8080,
+  "ui_port": 80,
+  "development": false,
+  "production": true
+}
