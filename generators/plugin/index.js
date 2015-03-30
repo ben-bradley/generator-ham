@@ -62,8 +62,9 @@ module.exports = yeoman.generators.Base.extend({
 
   install: function () {
     var dir = this.props.name;
-    this.npmInstall(dir, {
-      prefix: dir
-    });
+    if (!this.options['skip-install'])
+      this.npmInstall(dir, {
+        prefix: dir
+      });
   }
 });
