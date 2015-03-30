@@ -23,7 +23,7 @@ describe('ham:app', function () {
     assert.file([
       'assets/index.js',
       'assets/package.json',
-      'assets/logs',
+      'assets/logs/',
       'assets/bower_components',
       'config/default.json',
       'config/production.json',
