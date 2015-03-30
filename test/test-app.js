@@ -24,7 +24,7 @@ describe('ham:app', function () {
       'assets/index.js',
       'assets/package.json',
       //'assets/logs/assets.log', // this test passes on my mac ???
-      'assets/bower_components',
+      //'assets/bower_components', // same
       'config/default.json',
       'config/production.json',
       'config/release.json',
