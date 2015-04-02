@@ -39,6 +39,7 @@ module.exports = yeoman.generators.Base.extend({
     app: function () {
       this.template('_package.json', 'package.json');
       this.template('_bower.json', 'bower.json');
+      this.template('_.gitignore', '_.gitignore');
 
       this.directory('config', 'config');
       this.directory('assets', 'assets');
@@ -47,7 +48,6 @@ module.exports = yeoman.generators.Base.extend({
       this.copy('.bowerrc', '.bowerrc');
       this.copy('gulpfile.js', 'gulpfile.js');
       this.copy('index.js', 'index.js');
-      this.copy('.gitignore', '.gitignore');
       this.copy('.travis.yml', '.travis.yml');
       this.copy('readme.md', 'readme.md');
 
