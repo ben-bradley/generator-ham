@@ -46,7 +46,7 @@ This will generate the server framework needed to get your micro-apps online.  W
   readme.md
 ```
 
-#### 'assets/`
+#### `assets/`
 
 Let me be very clear, I am __not__ good at UI/UX.  I rely very heavily on the work of the good folks who make Bootstrap and UIKit to make my micro-apps look good.
 
