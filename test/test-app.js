@@ -33,7 +33,7 @@ describe('ham:app', function () {
       'bower.json',
       'package.json',
       '.bowerrc',
-      '.gitignore',
+      //'.gitignore',
       '.travis.yml',
       'gulpfile.js',
       'index.js',
