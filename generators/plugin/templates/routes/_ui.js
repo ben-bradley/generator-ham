@@ -6,7 +6,8 @@ var PATHS = {
 
 module.exports = function(server, options) {
   var ui = server.select('ui'),
-    api = server.select('api');
+    api = server.select('api'),
+    name = '<%= props.name %>';
 
   ui.views({
     engines: {
@@ -25,7 +26,7 @@ module.exports = function(server, options) {
         reply.view('index', {
           title: '<%= props.name %> UI',
           someContent: 'This is templated content',
-          appFile: (server.app.config.development) ? 'app.js' : 'app.min.js',
+          appFile: (server.app.config.development) ? name + '/app.js' : name + '/app.min.js',
           api: api.info.uri
         });
       }
